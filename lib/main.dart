@@ -13,19 +13,34 @@ class LandingPage extends StatelessWidget {
           backgroundColor: Color(0xffe8edfb),
           body: Column(children: <Widget>[
             SizedBox(
-              height: 20,
+              height: 30,
               width: 10,
             ),
             Container(
-                alignment: Alignment.topLeft,
-                margin: new EdgeInsets.symmetric(horizontal: 20),
-                child: Text(
-                  'ACM',
-                  style: TextStyle(
-                      color: Color(0xff5078E1),
-                      fontWeight: FontWeight.bold,
-                      fontSize: 32),
-                )),
+              alignment: Alignment.topLeft,
+              margin: new EdgeInsets.symmetric(horizontal: 20),
+              child: Text(
+                'ACM',
+                style: TextStyle(
+                  color: Color(0xff5078E1),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 32,
+                  fontFamily: 'Circular Std',
+                  shadows: <Shadow>[
+                    Shadow(
+                      color: Colors.black.withOpacity(0.25),
+                      blurRadius: 4,
+                      offset: Offset(0, 4),
+                    ),
+                    Shadow(
+                      color: Colors.black.withOpacity(0.25),
+                      blurRadius: 4,
+                      offset: Offset(0, 4),
+                    ),
+                  ],
+                ),
+              ),
+            ),
             Stack(
               alignment: Alignment.center,
               children: [
@@ -33,13 +48,13 @@ class LandingPage extends StatelessWidget {
                   child: Image.asset(
                     'images/Vector7.png',
                     fit: BoxFit.fill,
-                    height: 450,
+                    height: 435,
                     width: 405,
                   ),
                 ),
                 Positioned(
-                  top: 50,
-                  right: 80,
+                  top: 40,
+                  right: 70,
                   child: Container(
                     margin: new EdgeInsets.symmetric(horizontal: 100),
                     child: Image.asset(
@@ -53,39 +68,71 @@ class LandingPage extends StatelessWidget {
                   child: Container(
                     child: Text(
                       'Opportunity',
-                      style: TextStyle(color: Colors.white, fontSize: 40),
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 40,
+                        fontFamily: 'Circular Std',
+                      ),
                     ),
                   ),
                 ),
               ],
             ),
             SizedBox(
-              height: 50,
+              height: 45,
             ),
-            SizedBox(
+            Container(
               height: 42,
               width: 324,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.25),
+                    blurRadius: 4,
+                    offset: Offset(0, 4), // changes position of shadow
+                  ),
+                ],
+              ),
               child: ElevatedButton(
                   onPressed: () {},
                   child: Text(
                     'Create A New Account',
-                    style: TextStyle(color: Colors.white),
+                    style: TextStyle(
+                        color: Colors.white, fontFamily: 'Circular Std'),
                   ),
-                  style: ElevatedButton.styleFrom(primary: Color(0xff5078E1))),
+                  style: ElevatedButton.styleFrom(
+                    primary: Color(0xff5078E1),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(8)),
+                  )),
             ),
             SizedBox(
               height: 20,
             ),
-            SizedBox(
+            Container(
               height: 42,
               width: 324,
+              decoration: BoxDecoration(
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.25),
+                    blurRadius: 4,
+                    offset: Offset(0, 4), // changes position of shadow
+                  ),
+                ],
+              ),
               child: ElevatedButton(
                 onPressed: () {},
                 child: Text(
                   'Login',
-                  style: TextStyle(color: Color(0xff5078E1)),
+                  style: TextStyle(
+                      color: Color(0xff5078E1), fontFamily: 'Circular Std'),
                 ),
-                style: ElevatedButton.styleFrom(primary: Colors.white),
+                style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8)),
+                ),
               ),
             )
           ])),
